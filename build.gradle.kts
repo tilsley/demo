@@ -4,6 +4,7 @@ plugins {
 	application
 	id("org.springframework.boot") version springBootVersion
 	id("io.spring.dependency-management") version "1.0.6.RELEASE"
+	id("org.javamodularity.moduleplugin") version "1.3.0"
 }
 
 subprojects {
@@ -14,7 +15,7 @@ group = "com.demo.service"
 apply(from = rootProject.file( "docker.gradle.kts"))
 
 configure<ApplicationPluginConvention> {
-	mainClassName = "com.stripe.StripeApplication"
+	mainClassName = "com.demo.service.DemoApplication"
 }
 
 configure<JavaPluginExtension> {
