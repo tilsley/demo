@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-LABEL name=stripe-demo
+LABEL name=demo
 
 COPY build/distributions/ /
 
@@ -14,4 +14,4 @@ EXPOSE 8080 8081
 
 WORKDIR /service
 
-ENTRYPOINT ./bin/stripe
+ENTRYPOINT ./bin/demo
